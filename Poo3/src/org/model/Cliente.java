@@ -3,7 +3,6 @@ package org.model;
 public class Cliente {
     private String nome;
     private String cpf;
-
     private int idade;
 
     public Cliente() {

@@ -2,20 +2,26 @@ package org.model;
 
 public class Pedido {
     private int numero;
-    private Sessao sessão;
+    private Sessao sessao;
     private Funcionario funcionario;
+    private Cliente cliente;
 
     public Pedido() {
         this.numero = 0;
-        this.sessão = sessão;
-        this.funcionario = funcionario;
+        this.sessao = null;
+        this.funcionario = null;
+        this.cliente = null;
     }
 
 
-    public Pedido(int numero, Sessao sessão, Funcionario funcionario) {
+    public Pedido(int numero, Sessao sessao, Funcionario funcionario) {
         this.numero = numero;
-        this.sessão = sessão;
+        this.sessao = sessao;
         this.funcionario = funcionario;
+        this.cliente = cliente;
+    }
+
+    public Pedido(int i, Sessao sessao, Funcionario funcionario, Cliente cliente) {
     }
 
     public int getNumero() {
@@ -26,12 +32,12 @@ public class Pedido {
         this.numero = numero;
     }
 
-    public Sessao getSessão() {
-        return sessão;
+    public Sessao getSessao() {
+        return sessao;
     }
 
-    public void setSessão(Sessao sessão) {
-        this.sessão = sessão;
+    public void setSessao(Sessao sessao) {
+        this.sessao = sessao;
     }
 
     public Funcionario getFuncionario() {
@@ -42,4 +48,11 @@ public class Pedido {
         this.funcionario = funcionario;
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 }

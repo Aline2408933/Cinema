@@ -1,66 +1,43 @@
 package org.model;
-
 public class Ingresso {
-    private String Inteiro;
-    private String Meia;
 
-    private int quantidademeia;
-    private int quantidadeinteiro;
-
-     private Cliente cliente;
-
+    private String tipo; //"meia" ou inteira
+    private Cliente cliente;
+    private Sessao sessao;
 
     public Ingresso() {
-        Inteiro = "";
-        Meia = "";
-        this.quantidademeia = 0;
-        this.quantidadeinteiro = 0;
+        this.tipo = "";
+        this.cliente = null ;
+        this.sessao = null;
     }
 
-    public Ingresso(String inteiro, String meia, int quantidademeia, int quantidadeinteiro, Cliente cliente) {
-        Inteiro = inteiro;
-        Meia = meia;
-        this.quantidademeia = quantidademeia;
-        this.quantidadeinteiro = quantidadeinteiro;
+    public Ingresso(String tipo, Cliente cliente, Sessao sessao) {
+        this.tipo = tipo;
+        this.cliente = cliente;
+        this.sessao = sessao;
     }
 
-    public String getInteiro() {
-        return Inteiro;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setInteiro(String inteiro) {
-        Inteiro = inteiro;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public String getMeia() {
-        return Meia;
-    }
-
-    public void setMeia(String meia) {
-        Meia = meia;
+    public Cliente getCliente() {
+        return cliente;
     }
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
 
-    public int getQuantidademeia() {
-        return quantidademeia;
+    public Sessao getSessao() {
+        return sessao;
     }
 
-    public void setQuantidademeia(int quantidademeia) {
-        this.quantidademeia = quantidademeia;
-    }
-
-    public int getQuantidadeinteiro() {
-        return quantidadeinteiro;
-    }
-
-    public void setQuantidadeinteiro(int quantidadeinteiro) {
-        this.quantidadeinteiro = quantidadeinteiro;
-    }
-
-    public Cliente getCliente() {
-        return cliente;
+    public void setSessao(Sessao sessao) {
+        this.sessao = sessao;
     }
 }
